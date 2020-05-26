@@ -44,6 +44,7 @@
 
     <!-- Javascript -->
     <script src="./public/js/library/jquery-3.4.0.min.js"></script>
+    <script src="./public/js/library/rivets.bundled.min.js"></script>
 
     <script src="./public/js/plugin/eclipse.js"></script>
     <script src="./public/js/plugin/inflation.js"></script>
@@ -52,8 +53,81 @@
 
     <script src="./public/js/simplizm/core.js"></script>
     <script src="./public/js/simplizm/init.js"></script>
+    <script src="./public/js/simplizm/rivets.js"></script>
 </head>
 <body>
-    <div id="wrap">index.html</div>
+  <style>
+    #wrap {width: 600px; margin: 0 auto; padding: 100px 0;}
+    #wrap h1 {font-weight: 700; font-size: 36px; text-align: center;}
+    #wrap input {margin: 50px 0 0;}
+    #wrap button {margin: 10px 0 0;}
+    #wrap .value {margin: 100px 0 0; font-size: 24px; text-align: center;}
+    #wrap .result {margin: 30px 0 0; font-size: 24px; text-align: center;}
+    #wrap .result strong {font-weight: 700; color: red;}
+  </style>
+  <div id="wrap">
+    <h1>대한민국 순자산 순위 구하기</h1>
+    <input type="text" rv-value="post.asset" placeholder="자산을 입력하세요">
+    <button type="button" class="_btn h36 c1" rv-on-click="methods.actionCompute">계산하기</button>
+    <p class="value">당신의 순자산 { post.asset | number } 원</p>
+    <p class="result" rv-html="item.result"></p>
+  </div>
+	<script>
+		var FRONT = new function() {
+			var _ = this;
+
+      _.post = {};
+			_.item = {
+        percentile: [
+          0,
+          10700000,
+          43310000,
+          89500000,
+          140650000,
+          200500000,
+          274960000,
+          369140000,
+          517000000,
+          810120000,
+          1240000000000 // 36위 0.000001 %
+        ],
+        result: ''
+      };
+
+			console.log(_);
+
+			_.methods = {
+        actionCompute: function(e, m) {
+          if (!/^[0-9]*$/.test(_.post.asset)) {
+            alert('0이상의 정수만 입력해주세요');
+            return;
+          }
+
+          var group = 0;
+          var result = 0;
+
+          $.each(_.item.percentile, function(i, o) {
+            group = i;
+            if (_.post.asset < o) {
+              return false;
+            }
+          });
+
+          if (group < 10) {
+            var max = _.item.percentile[group] - _.item.percentile[group - 1];
+            var val = _.item.percentile[group] - (_.post.asset - _.item.percentile[group - 1]);
+
+            result = (10 - group) * 10 + val / max * 10;
+          } else {
+            result = 0.000001;
+          }
+
+          _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
+        }
+      };
+
+			rivets.bind($('#wrap'), _);
+		}
+  </script>
 </body>
 </html>
