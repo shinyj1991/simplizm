@@ -1,0 +1,158 @@
+::-moz-selection {background: #49bdb4; color: #ffffff;}
+::selection {background: #49bdb4; color: #ffffff;}
+
+* {-webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; font-family: inherit; font-style: normal; font-weight: inherit; font-size: inherit; line-height: inherit; text-decoration: inherit; color: inherit; vertical-align: top; outline: none; text-underline-position: under;}
+*:before,
+*:after {-webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; font-family: inherit; font-style: normal; font-weight: inherit; font-size: inherit; line-height: inherit; text-decoration: inherit; color: inherit; vertical-align: top; outline: none; text-underline-position: under;}
+
+html {width: 100%; height: 100%; -ms-touch-action: manipulation; touch-action: manipulation;}
+body {width: 100%; height: 100%; font-family: NanumGothic; font-weight: 400; font-size: 14px; line-height: 1.5; letter-spacing: -0.05em; color: #000000; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-size-adjust: 100%; -webkit-print-color-adjust: exact;}
+
+ul, ol, li {list-style: none;}
+img, hr {border: none;}
+p {max-height: 999999px;}
+table {width: 100%; border-spacing: 0; table-layout: fixed;}
+th, td {vertical-align: middle;}
+
+/* input */
+input[type=date],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea,
+select {display: inline-block; width: 100%; height: 44px; border-radius: 3px; padding: 0 15px; border: 1px solid #d2d2d2; background: #ffffff; color: #000000;}
+
+textarea {padding: 15px;}
+select {-webkit-appearance: none; background: url(../images/common/select.png) right 9px center no-repeat;}
+
+input[type=time]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;}
+
+/* focus */
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+textarea:focus,
+select:focus {position: relative; border-color: #000000;}
+
+/* valid */
+/*input:not(:placeholder-shown), 
+textarea:not(:placeholder-shown) {border-color: #d2d2d2; color: #000000;}
+select:valid {border-color: #d2d2d2; color: #000000;}*/
+
+/* disabled */
+input[type=date]:disabled,
+input[type=datetime-local]:disabled,
+input[type=email]:disabled,
+input[type=month]:disabled,
+input[type=number]:disabled,
+input[type=password]:disabled,
+input[type=search]:disabled,
+input[type=tel]:disabled,
+input[type=text]:disabled,
+input[type=time]:disabled,
+input[type=url]:disabled,
+input[type=week]:disabled,
+textarea:disabled,
+select:disabled {background: #f5f5f5;}
+
+/* placeholder */
+input[type=date]::-webkit-input-placeholder,
+input[type=datetime-local]::-webkit-input-placeholder,
+input[type=email]::-webkit-input-placeholder,
+input[type=month]::-webkit-input-placeholder,
+input[type=number]::-webkit-input-placeholder,
+input[type=password]::-webkit-input-placeholder,
+input[type=search]::-webkit-input-placeholder,
+input[type=tel]::-webkit-input-placeholder,
+input[type=text]::-webkit-input-placeholder,
+input[type=time]::-webkit-input-placeholder,
+input[type=url]::-webkit-input-placeholder,
+input[type=week]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {color: #aaaaaa;}
+input[type=date]:-moz-placeholder,
+input[type=datetime-local]:-moz-placeholder,
+input[type=email]:-moz-placeholder,
+input[type=month]:-moz-placeholder,
+input[type=number]:-moz-placeholder,
+input[type=password]:-moz-placeholder,
+input[type=search]:-moz-placeholder,
+input[type=tel]:-moz-placeholder,
+input[type=text]:-moz-placeholder,
+input[type=time]:-moz-placeholder,
+input[type=url]:-moz-placeholder,
+input[type=week]:-moz-placeholder,
+textarea:-moz-placeholder {color: #aaaaaa;}
+input[type=date]::-moz-placeholder,
+input[type=datetime-local]::-moz-placeholder,
+input[type=email]::-moz-placeholder,
+input[type=month]::-moz-placeholder,
+input[type=number]::-moz-placeholder,
+input[type=password]::-moz-placeholder,
+input[type=search]::-moz-placeholder,
+input[type=tel]::-moz-placeholder,
+input[type=text]::-moz-placeholder,
+input[type=time]::-moz-placeholder,
+input[type=url]::-moz-placeholder,
+input[type=week]::-moz-placeholder,
+textarea::-moz-placeholder {color: #aaaaaa;}
+input[type=date]:-ms-input-placeholder,
+input[type=datetime-local]:-ms-input-placeholder,
+input[type=email]:-ms-input-placeholder,
+input[type=month]:-ms-input-placeholder,
+input[type=number]:-ms-input-placeholder,
+input[type=password]:-ms-input-placeholder,
+input[type=search]:-ms-input-placeholder,
+input[type=tel]:-ms-input-placeholder,
+input[type=text]:-ms-input-placeholder,
+input[type=time]:-ms-input-placeholder,
+input[type=url]:-ms-input-placeholder,
+input[type=week]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color: #aaaaaa;}
+
+select::-ms-expand {display: none;}
+
+input[type=password] {font-family: NanumGothic;}
+
+button,
+input[type=file],
+input[type=image],
+input[type=reset],
+input[type=button],
+input[type=submit] {border: none; background: none; border-radius: 0; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; letter-spacing: -0.05em;}
+
+label {cursor: pointer;}
+legend, hr, caption {visibility: hidden; overflow: hidden; width: 0px; height: 0px; font-size: 0px; line-height: 0px; border: none; background: none; position: absolute; left: -9999em; top: -9999em; opacity: 0;}
+fieldset, iframe {border: none;}
+sup, sub {line-height: 1;}
+
+a:link {text-decoration: none; color: inherit;}
+a:hover {text-decoration: none; color: inherit;}
+a:visited {text-decoration: none; color: inherit;}
+a:active {text-decoration: none; color: inherit;}
+a:focus {text-decoration: none; color: inherit;}
+
+a:focus,
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {outline: none;}
