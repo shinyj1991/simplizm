@@ -126,11 +126,11 @@
           } else {
             if (group === 10) { // 5 ~ 10 %
               result = 5 + val / max * 5;
-            _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
+              _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
             }
             if (group === 11) { // 1 ~ 5 %
-              result = val / max * 5;
-            _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
+              result = val / max * 5 ? val / max * 5 : 1;
+              _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
             }
             if (group === 12) { // 1 ~ 5 %
               console.log(val / max);
@@ -143,6 +143,7 @@
               _.item.result = '당신의 순자산은 대한민국 <strong>1위</strong>입니다.';
             }
           }
+          console.log(group);
         }
       };
 
