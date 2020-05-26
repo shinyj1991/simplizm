@@ -57,20 +57,22 @@
 </head>
 <body>
   <style>
-    #wrap {width: 600px; margin: 0 auto; padding: 100px 0;}
-    #wrap h1 {font-weight: 700; font-size: 36px; text-align: center;}
-    #wrap input {margin: 50px 0 0;}
-    #wrap button {margin: 10px 0 0;}
-    #wrap .value {margin: 100px 0 0; font-size: 24px; text-align: center;}
-    #wrap .result {margin: 30px 0 0; font-size: 24px; text-align: center;}
+    #wrap {width: 600px; margin: 0 auto; padding: 100px 0; font-size: 24px;}
+    #wrap h1 {font-weight: 700; font-size: 50px; text-align: center;}
+    #wrap input {height: 100px; margin: 50px 0 0; font-size: 34px;}
+    #wrap ._btn {height: 100px; margin: 30px 0 0; font-size: 34px;}
+    #wrap .value {margin: 100px 0 0; font-size: 30px; text-align: center;}
+    #wrap .result {margin: 30px 0 0; font-size: 30px; text-align: center;}
     #wrap .result strong {font-weight: 700; color: red;}
+    #wrap .notice {margin: 30px 0 0; color: #777777;}
   </style>
   <div id="wrap">
     <h1>대한민국 순자산 순위 구하기</h1>
-    <input type="text" rv-value="post.asset" placeholder="자산을 입력하세요">
-    <button type="button" class="_btn h36 c1" rv-on-click="methods.actionCompute">계산하기</button>
+    <input type="number" rv-value="post.asset" placeholder="자산을 입력하세요">
+    <button type="button" class="_btn c1" rv-on-click="methods.actionCompute">계산하기</button>
     <p class="value">당신의 순자산 { post.asset | number } 원</p>
     <p class="result" rv-html="item.result"></p>
+    <p class="notice">※ 위 순위는 통계청 자료를 기반으로 근사치를 구한값입니다.<br>어디까지나 재미로 봐주세요</p>
   </div>
 	<script>
 		var FRONT = new function() {
@@ -89,6 +91,8 @@
           369140000, // 30%
           517000000, // 20%
           810120000, // 10%
+          1400000000, // 5%
+          3000000000, // 1%
           1240000000000, // 36위 0.000001 %
           19840000000000 // 1위
         ],
@@ -113,21 +117,31 @@
             }
           });
 
-          console.log(group);
+          var max = _.item.percentile[group] - _.item.percentile[group - 1];
+          var val = max - (_.post.asset - _.item.percentile[group - 1]);
 
-          if (group < 11) {
-            var max = _.item.percentile[group] - _.item.percentile[group - 1];
-            var val = max - (_.post.asset - _.item.percentile[group - 1]);
-
+          if (group < 10) {
             result = (10 - group) * 10 + val / max * 10;
-          } else {
-            result = 0.000001;
-          }
-
-          if (group < 12) {
             _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
           } else {
-            _.item.result = '당신의 순자산은 대한민국 <strong>1위</strong>입니다.';
+            if (group === 10) { // 5 ~ 10 %
+              result = 5 + val / max * 5;
+            _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
+            }
+            if (group === 11) { // 1 ~ 5 %
+              result = val / max * 5;
+            _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
+            }
+            if (group === 12) { // 1 ~ 5 %
+              console.log(val / max);
+              _.item.result = '당신의 순자산은 대한민국 상위 <strong>1%</strong> 이내 입니다.';
+            }
+            if (group === 13) { // 2위 ~ 1%
+              _.item.result = '당신의 순자산은 대한민국 상위 <strong>0.000001%</strong> 입니다.';
+            }
+            if (group === 14) { // 1위
+              _.item.result = '당신의 순자산은 대한민국 <strong>1위</strong>입니다.';
+            }
           }
         }
       };
