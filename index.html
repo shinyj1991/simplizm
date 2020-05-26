@@ -79,16 +79,16 @@
       _.post = {};
 			_.item = {
         percentile: [
-          0,
-          10700000,
-          43310000,
-          89500000,
-          140650000,
-          200500000,
-          274960000,
-          369140000,
-          517000000,
-          810120000,
+          0, // 100%
+          10700000, // 90%
+          43310000, // 80%
+          89500000, // 70%
+          140650000, // 60%
+          200500000, // 50%
+          274960000, // 40%
+          369140000, // 30%
+          517000000, // 20%
+          810120000, // 10%
           1240000000000, // 36위 0.000001 %
           19840000000000 // 1위
         ],
@@ -108,24 +108,23 @@
           var result = 0;
 
           $.each(_.item.percentile, function(i, o) {
-            group = i;
-            if (_.post.asset < o) {
-              return false;
+            if (_.post.asset > o) {
+              group++;
             }
           });
 
           console.log(group);
 
-          if (group < 10) {
+          if (group < 11) {
             var max = _.item.percentile[group] - _.item.percentile[group - 1];
-            var val = _.item.percentile[group] - (_.post.asset - _.item.percentile[group - 1]);
+            var val = max - (_.post.asset - _.item.percentile[group - 1]);
 
             result = (10 - group) * 10 + val / max * 10;
           } else {
             result = 0.000001;
           }
 
-          if (group < 11) {
+          if (group < 12) {
             _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
           } else {
             _.item.result = '당신의 순자산은 대한민국 <strong>1위</strong>입니다.';
