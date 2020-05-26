@@ -89,7 +89,8 @@
           369140000,
           517000000,
           810120000,
-          1240000000000 // 36위 0.000001 %
+          1240000000000, // 36위 0.000001 %
+          19840000000000 // 1위
         ],
         result: ''
       };
@@ -113,6 +114,8 @@
             }
           });
 
+          console.log(group);
+
           if (group < 10) {
             var max = _.item.percentile[group] - _.item.percentile[group - 1];
             var val = _.item.percentile[group] - (_.post.asset - _.item.percentile[group - 1]);
@@ -122,7 +125,11 @@
             result = 0.000001;
           }
 
-          _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
+          if (group < 11) {
+            _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
+          } else {
+            _.item.result = '당신의 순자산은 대한민국 <strong>1위</strong>입니다.';
+          }
         }
       };
 
