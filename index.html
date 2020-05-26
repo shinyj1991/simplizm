@@ -120,7 +120,9 @@
           var max = _.item.percentile[group] - _.item.percentile[group - 1];
           var val = max - (_.post.asset - _.item.percentile[group - 1]);
 
-          if (group < 10) {
+          if (group === 0) {
+            _.item.result = '당신의 순자산은 대한민국 상위<br><strong>100%</strong> 입니다.';
+          } else if (group < 10) {
             result = (10 - group) * 10 + val / max * 10;
             _.item.result = '당신의 순자산은 대한민국 상위<br><strong>' + result + '%</strong> 입니다.';
           } else {
