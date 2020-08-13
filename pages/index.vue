@@ -1,7 +1,6 @@
 <template>
-  <section class="home">
-    <nuxt-link to="/todo">Todo List</nuxt-link>
-    <nuxt-link to="/UIGuide">UI GUIDE</nuxt-link>
+  <section id="main">
+    <p class="greet">Name : Shin yongjun, Job : Frontend developer</p>
   </section>
 </template>
 
@@ -17,8 +16,8 @@
 </script>
 
 <style lang="scss">
-.home {padding: 50px;
-  a {display: inline-block; border: 1px solid #cccccc; padding: 20px; background: #f7f7f7;}
+#main {padding: 50px;
+  .greet {font-family: 'Roboto'; font-size: 16px;}
 }
 </style>
 
