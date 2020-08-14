@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scope>
 #header {position: fixed; top: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.8);
-  .inner {position: relative; max-width: 1280px; height: 100px; margin: 0 auto; border-bottom: 1px solid #ffffff;
+  > .inner {position: relative; max-width: 1280px; height: 100px; margin: 0 auto; border-bottom: 1px solid #ffffff;
     h1 {position: absolute; top: 20px; left: 20px;
       a {display: block; font-family: 'Roboto'; font-weight: 700; font-size: 36px; line-height: 60px; color: #ffffff;}
     }

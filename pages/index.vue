@@ -19,4 +19,10 @@
 #main {padding: 50px;
   .greet {font-family: 'Roboto'; font-size: 16px; letter-spacing: 0.05em;}
 }
+
+@media screen and (max-width: 750px) {
+  #main {
+    .greet {font-size: 24px;}
+  }
+}
 </style>
