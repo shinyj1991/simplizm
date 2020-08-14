@@ -17,7 +17,6 @@ module.exports = {
     base: BASE_DIR,
     middleware: 'RouteEnter'
   },
-  mode: 'spa',
   generate: {
     fallback: true
   },
