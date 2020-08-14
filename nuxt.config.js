@@ -16,7 +16,10 @@ module.exports = {
   router: {
     base: BASE_DIR
   },
-  loading: { color: '#0f4f7d' },
+  generate: {
+    fallback: true
+  },
+  loading: { color: '#ffffff' },
   css: [
     {src: '~/assets/scss/reset.scss', lang: 'scss'},
     {src: '~/assets/scss/common.scss', lang: 'scss'}
