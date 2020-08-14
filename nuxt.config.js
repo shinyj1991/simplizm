@@ -18,6 +18,9 @@ module.exports = {
     middleware: 'RouteEnter'
   },
   mode: 'spa',
+  generate: {
+    fallback: true
+  },
   loading: { color: '#ffffff' },
   css: [
     {src: '~/assets/scss/reset.scss', lang: 'scss'},
