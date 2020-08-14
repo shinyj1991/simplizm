@@ -3,10 +3,10 @@
     <h1>About</h1>
     <div class="json">
       <section>
-        <h2><span class="function">export</span> <span class="reserved">const</span> <span class="const">information</span> {</h2>
+        <h2><span class="function">export</span> <span class="reserved">const</span> <span class="const">Information</span> {</h2>
         <ul>
           <li><span class="variable">Name:</span> <span class="string">'Shin Yongjun'</span>,</li>
-          <li><span class="variable">Job:</span> [<span class="string">'Frontend Developer'</span>, <span class="string">'Web Publisher'</span>],</li>
+          <li><span class="variable">Job:</span> <span class="string">'Frontend Developer'</span>,</li>
           <li><span class="variable">Birth:</span> <span class="string">'1991. 11. 11'</span>,</li>
           <li><span class="variable">E-mail:</span> <span class="string">'shinyj1991@gmail.com'</span>,</li>
           <li><span class="variable">Location:</span> <span class="string">'Seoul'</span>,</li>
@@ -21,31 +21,31 @@
           <li><span class="variable">Wise C&amp;S</span>: {
             <ul>
               <li><span class="variable">Period:</span> <span class="string">'2013. 10 ~ 2014. 01 (4m)'</span>,</li>
-              <li><span class="variable">duties:</span> [<span class="string">'Table coding'</span>]</li>
+              <li><span class="variable">duties:</span> <span class="string">'Table coding'</span></li>
             </ul>
           },</li>
           <li><span class="variable">Megacoding</span>: {
             <ul>
               <li><span class="variable">Period:</span> <span class="string">'2014. 02 ~ 2015. 03 (1y 2m)'</span>,</li>
-              <li><span class="variable">duties:</span> [<span class="string">'Web publishing'</span>]</li>
+              <li><span class="variable">duties:</span> <span class="string">'Web publishing'</span></li>
             </ul>
           },</li>
           <li><span class="variable">Newriver</span>: {
             <ul>
               <li><span class="variable">Period:</span> <span class="string">'2015. 04 ~ 2018. 08 (3y 5m)'</span>,</li>
-              <li><span class="variable">duties:</span> [<span class="string">'Web publishing'</span>, <span class="string">'Team management'</span>]</li>
+              <li><span class="variable">duties:</span> <span class="string">'Web publishing'</span></li>
             </ul>
           },</li>
           <li><span class="variable">Free-lancer</span>: {
             <ul>
               <li><span class="variable">Period:</span> <span class="string">'2018. 09 ~ 2019. 01 (5m)'</span>,</li>
-              <li><span class="variable">duties:</span> [<span class="string">'Web publishing'</span>]</li>
+              <li><span class="variable">duties:</span> <span class="string">'Web publishing'</span></li>
             </ul>
           },</li>
           <li><span class="variable">Newborn Holdings</span>: {
             <ul>
               <li><span class="variable">Period:</span> <span class="string">'2019. 02 ~ Now'</span>,</li>
-              <li><span class="variable">duties:</span> [<span class="string">'Frontend Development'</span>, <span class="string">'Web publishing'</span>]</li>
+              <li><span class="variable">duties:</span> <span class="string">'Frontend Development'</span></li>
             </ul>
           }</li>
         </ul>
