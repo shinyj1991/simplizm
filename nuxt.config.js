@@ -16,9 +16,7 @@ module.exports = {
   router: {
     base: BASE_DIR
   },
-  generate: {
-    fallback: true
-  },
+  mode: 'spa',
   loading: { color: '#ffffff' },
   css: [
     {src: '~/assets/scss/reset.scss', lang: 'scss'},
