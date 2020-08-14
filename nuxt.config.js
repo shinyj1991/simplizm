@@ -40,7 +40,8 @@ module.exports = {
   },
   plugins: [
     '~/plugins/GlobalComponents.js',
-    '~/plugins/AxiosConfig.js'
+    '~/plugins/AxiosConfig.js',
+    '~/plugins/Directives.js'
   ]
 }
 
