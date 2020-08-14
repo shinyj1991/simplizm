@@ -1,5 +1,3 @@
 export default function(context) {
-  context.app.router.afterEach(function(to) {
-    context.app.router.push(to.fullPath);
-  });
+  context.app.router.push(context.route.path);
 }

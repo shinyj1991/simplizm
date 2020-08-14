@@ -17,9 +17,6 @@ module.exports = {
     base: BASE_DIR,
     middleware: 'RouteEnter'
   },
-  generate: {
-    fallback: true
-  },
   loading: { color: '#ffffff' },
   css: [
     {src: '~/assets/scss/reset.scss', lang: 'scss'},
