@@ -18,7 +18,7 @@ module.exports = {
   },
   mode: 'spa',
   generate: {
-    fallback: true
+    fallback: 'index.html'
   },
   loading: { color: '#ffffff' },
   css: [
