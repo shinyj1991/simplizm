@@ -87,7 +87,6 @@
         img {max-width: 100%; max-height: 100%;}
       }
       .year {font-style: italic;}
-      .name {}
     }
   }
 }
