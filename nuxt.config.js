@@ -40,7 +40,7 @@ module.exports = {
     }
   },
   plugins: [
-    '~/plugins/WebLog.js',
+    '~/plugins/RouterPush.js',
     '~/plugins/GlobalComponents.js',
     '~/plugins/AxiosConfig.js',
     '~/plugins/Directives.js'
