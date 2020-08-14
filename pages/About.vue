@@ -64,7 +64,7 @@
 <style lang="scss">
 #about {padding: 50px;
   h1 {margin: 0 0 24px; font-weight: 400; font-size: 24px;}
-  .json {padding: 0 0; font-family: Consolas, 'Courier New', monospace; line-height: 1.8; font-size: 14px; letter-spacing: 1px;
+  .json {padding: 0 0; font-family: Consolas, 'Courier New', monospace; line-height: 1.8; font-size: 14px; letter-spacing: 0.05em;
     .string {color: #ce9178;}
     .function {color: #c586c0;}
     .reserved {color: #569cd6;}
@@ -74,6 +74,13 @@
       &:first-child {margin-top: 0;}
     }
     ul {padding: 0 0 0 36px;}
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #about {
+    h1 {font-size: 36px;}
+    .json {font-size: 24px; letter-spacing: 0;}
   }
 }
 </style>
