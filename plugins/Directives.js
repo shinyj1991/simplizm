@@ -33,7 +33,6 @@ Vue.directive('lazyloading', {
           // 이미지 로드가 되면 img태그를 append합니다
           // placeholder는 제거해줍니다.
           imgEl.onload = function(){
-            console.log('img onload : ' + binding.value);
             placeholderEl.style["opacity"] = 0;
             el.appendChild(imgEl); 
             setTimeout(() => {
