@@ -25,6 +25,8 @@ module.exports = {
     {src: '~/assets/scss/common.scss', lang: 'scss'}
   ],
   build: {
+    assetsPublicPath: '/',
+    assetsSubDirectory: 'static',
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
