@@ -69,4 +69,17 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 750px) {
+
+#aside {
+  .inner {
+    ul {
+      li {
+        a {font-size: 40px;}
+      }
+    }
+  }
+}
+}
 </style>
