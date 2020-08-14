@@ -6,8 +6,8 @@
         <div class="logo">
           <img :src="item.logo" alt="">
         </div>
-        <p class="name">{{ item.name }}</p>
         <p class="year">{{ item.year }}</p>
+        <p class="name">{{ item.name }}</p>
       </li>
     </ul>
   </article>
