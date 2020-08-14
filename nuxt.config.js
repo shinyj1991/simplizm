@@ -14,7 +14,8 @@ module.exports = {
     ]
   },
   router: {
-    base: BASE_DIR
+    base: BASE_DIR,
+    middleware: 'RouteEnter'
   },
   mode: 'spa',
   generate: {
