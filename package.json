@@ -4,7 +4,7 @@
   "description": "Nuxt.js project",
   "author": "YJ",
   "private": true,
-  "homepage": "https://simplizm.com",
+  "homepage": "/",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
