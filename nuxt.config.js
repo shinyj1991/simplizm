@@ -2,7 +2,7 @@ const BASE_DIR = process.env.BASE_DIR || '';
 
 module.exports = {
   head: {
-    title: 'simplizm',
+    title: 'SIMPLIZM',
     meta: [
       { charset: 'utf-8' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }

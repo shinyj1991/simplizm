@@ -42,9 +42,6 @@
         <textarea style="height: 300px;" placeholder="textarea"></textarea>
       </div>
     </section>
-    <section>
-      <h2>INPUT</h2>
-    </section>
   </div>
 </template>
 

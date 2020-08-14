@@ -59,8 +59,8 @@ export default {
   ul {
     li {margin: 20px 0 0;
       &:before {margin-top: 0;}
-      a {color: rgb(42, 44, 160); text-decoration: underline;}
-      button {padding: 3px; background: #f7f7f7; border: 2px solid #cccccc; font-size: 24px;}
+      a {color: #ffffff; text-decoration: underline;}
+      button {padding: 3px; background: #f7f7f7; border: 1px solid #cccccc; color: #000000; font-size: 14px;}
     }
   }
 }

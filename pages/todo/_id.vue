@@ -42,6 +42,5 @@ export default {
 </script>
 
 <style lang="scss">
-.todo_detail {position: fixed; top: 0; right: 0; left: 0; height: 100%; background: #ffffff;}
 </style>
 
