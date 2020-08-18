@@ -15,7 +15,7 @@ module.exports = {
   },
   router: {
     base: BASE_DIR,
-    middleware: 'RouteEnter'
+    middleware: 'routeEnter'
   },
   mode: 'spa',
   generate: {
@@ -41,10 +41,10 @@ module.exports = {
     }
   },
   plugins: [
-    '~/plugins/RouterPush.js',
-    '~/plugins/GlobalComponents.js',
-    '~/plugins/AxiosConfig.js',
-    '~/plugins/Directives.js'
+    '~/plugins/routerPush.js',
+    '~/plugins/globalComponents.js',
+    '~/plugins/axiosConfig.js',
+    '~/plugins/directives.js'
   ]
 }
 

@@ -7,7 +7,6 @@
     <aside id="aside" :class="{ on: menuFlag }" @click="toggleMenu">
       <div class="inner">
         <ul>
-          <li><nuxt-link to="/">Greet</nuxt-link></li>
           <li><nuxt-link to="/about">About</nuxt-link></li>
           <li><nuxt-link to="/project">Project</nuxt-link></li>
           <li><nuxt-link to="/github">Github</nuxt-link></li>
