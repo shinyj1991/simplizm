@@ -2,7 +2,7 @@
   <article id="project">
     <page-title>Project</page-title>
     <ul class="list">
-      <li v-for="item in project" :key="item.id" v-lazyload>
+      <li class="v-lazyload" v-for="item in project" :key="item.id">
         <div class="logo" v-lazyload="item.logo"></div>
         <p class="year">{{ item.year }}</p>
         <p class="name">{{ item.name }}</p>
@@ -94,6 +94,9 @@ export default {
         }
       }
     }
+  }
+  .testImage {opacity: 0; transition: all 2000ms;
+    &.v-done {opacity: 1;}
   }
 }
 
