@@ -135,5 +135,16 @@ export default {
 }
 
 @media screen and (max-width: 750px) {
+#project {
+  .year_list {
+    > li {
+      .project_list {
+        > li {
+          .name {font-size: 26px;}
+        }
+      }
+    }
+  }
+}
 }
 </style>
