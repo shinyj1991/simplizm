@@ -7,7 +7,7 @@
         <p class="year">{{ item.year }}</p>
         <p class="name">{{ item.name }}</p>
       </li>
-    </ul>
+    </ul> 
   </article>
 </template>
 
