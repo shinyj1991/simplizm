@@ -10,7 +10,7 @@ Vue.directive('lazyload', {
   inserted(el, binding) {
     let options = {
       root: binding.value ? document.querySelector(binding.value.rootScrollEl) : null,
-      rootMargin: '0px'
+      rootMargin: '100px 0px'
     };
 
     el.className += ' v-lazyload';
