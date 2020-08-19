@@ -5,7 +5,9 @@ module.exports = {
     title: 'SIMPLIZM',
     meta: [
       { charset: 'utf-8' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'Welcome to SIMPLIZM.' },
+      { name: 'msapplication-TileColor', content: '#ffffff' },
+      { name: 'theme-color', content: '#000000' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
