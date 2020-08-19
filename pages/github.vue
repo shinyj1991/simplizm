@@ -35,16 +35,16 @@
           img {max-width: 200px; max-height: 200px;}
           &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
         }
-        .name {margin: 20px 0 0; font-size: 20px; color: #000000; transition: all 1000ms;}
-        .desc {margin: 10px 0 0; font-style: italic; font-size: 16px; color: #000000; transition: all 1000ms;}
+        .name {margin: 20px 0 0; font-size: 20px; opacity: 0; transition: all 1000ms;}
+        .desc {margin: 10px 0 0; font-style: italic; font-size: 16px; color: #cccccc; opacity: 0; transition: all 1000ms;}
       }
       &.lazyloaded {
         a {
           .visual {
             &:after {opacity: 0;}
           }
-          .name {background: none; color: #ffffff;}
-          .desc {background: none; color: #cccccc;}
+          .name {opacity: 1;}
+          .desc {opacity: 1;}
         }
       }
     }

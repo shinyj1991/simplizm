@@ -200,11 +200,12 @@ export default {
             img {max-width: 200px; max-height: 200px;}
             &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
           }
-          .name {font-size: 20px;}
+          .name {font-size: 20px; opacity: 0; transition: all 1000ms;}
           &.lazyloaded {
             .logo {
               &:after {opacity: 0;}
             }
+            .name {opacity: 1;}
           }
         }
       }
@@ -222,12 +223,14 @@ export default {
             img {max-width: 200px; max-height: 200px;}
             &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
           }
-          .name {font-size: 20px;}
-          .period {font-style: italic; font-size: 20px; color: #cccccc;}
+          .name {font-size: 20px; opacity: 0; transition: all 1000ms;}
+          .period {font-style: italic; font-size: 20px; color: #cccccc; opacity: 0; transition: all 1000ms;}
           &.lazyloaded {
             .logo {
               &:after {opacity: 0;}
             }
+            .name {opacity: 1;}
+            .period {opacity: 1;}
           }
         }
       }
