@@ -2,7 +2,7 @@
   <article id="main">
     <p class="greet">"Simple is always the best."<br><br>
     Hi. My name is Shin Yongjun.<br>
-    Working as a front-end developer and creating websites and applications.</p>
+    I work as a front-end developer and work on creating websites and applications.</p>
   </article>
 </template>
 
