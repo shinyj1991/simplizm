@@ -31,12 +31,12 @@
   .github_list {margin: 0 -50px -50px 0;
     li {float: left; width: 300px; margin: 0 50px 50px 0;
       a {display: block; text-align: center;
-        .visual {display: flex; justify-content: center; align-items: center; position: relative; height: 200px; background: #ffffff;
+        .visual {display: flex; justify-content: center; align-items: center; position: relative; height: 200px; margin: 0 0 12px; background: #ffffff;
           img {max-width: 200px; max-height: 200px;}
           &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
         }
-        .name {margin: 20px 0 0; font-size: 20px; opacity: 0; transition: all 1000ms;}
-        .desc {margin: 10px 0 0; font-style: italic; font-size: 16px; color: #cccccc; opacity: 0; transition: all 1000ms;}
+        .name {font-size: 20px; opacity: 0; transition: all 1000ms;}
+        .desc {margin: 5px 0 0; font-style: italic; font-size: 16px; color: #aaaaaa; opacity: 0; transition: all 1000ms;}
       }
       &.lazyloaded {
         a {

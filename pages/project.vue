@@ -192,7 +192,7 @@ export default {
     &.on {display: block;}
     > li {position: relative; margin: 50px 0 0;
       &:first-child {margin-top: 0;}
-      .year {position: sticky; top: 120px; left: 0; font-weight: 300; font-size: 36px; line-height: 50px; font-style: italic;}
+      .year {position: sticky; top: 120px; left: 0; font-weight: 300; font-size: 36px; line-height: 50px; font-style: italic; color: #cccccc;}
       .projects {width: 300px; margin: -50px 0 0 120px;
         > li {position: relative; margin: 50px 0 0; text-align: center;
           &:first-child {margin-top: 0;}
@@ -215,7 +215,7 @@ export default {
     &.on {display: block;}
     > li {position: relative; margin: 50px 0 0;
       &:first-child {margin-top: 0;}
-      .company {position: sticky; top: 120px; left: 0; font-weight: 300; font-size: 36px; line-height: 50px; font-style: italic;}
+      .company {position: sticky; top: 120px; left: 0; font-weight: 300; font-size: 36px; line-height: 50px; font-style: italic; color: #cccccc;}
       .projects {width: 300px; margin: -50px 0 0 180px;
         > li {position: relative; margin: 50px 0 0; text-align: center;
           &:first-child {margin-top: 0;}
@@ -224,7 +224,7 @@ export default {
             &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
           }
           .name {font-size: 20px; opacity: 0; transition: all 1000ms;}
-          .period {font-style: italic; font-size: 20px; color: #cccccc; opacity: 0; transition: all 1000ms;}
+          .period {margin: 5px 0 0; font-style: italic; font-size: 16px; color: #aaaaaa; opacity: 0; transition: all 1000ms;}
           &.lazyloaded {
             .logo {
               &:after {opacity: 0;}
