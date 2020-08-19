@@ -7,7 +7,7 @@
         <ul>
           <li><span class="variable">Name:</span> <span class="string">'Shin Yongjun'</span>,</li>
           <li><span class="variable">Job:</span> <span class="string">'Frontend Developer'</span>,</li>
-          <li><span class="variable">Skills:</span> [<span class="string">'html'</span>, <span class="string">'css'</span>, <span class="string">'javascript'</span>, <span class="string">'vue'</span>, <span class="string">'nuxt'</span>],</li>
+          <li><span class="variable">Skills:</span> [<span class="string">'html'</span>, <span class="string">'css'</span>, <span class="string">'javascript'</span>, <span class="string">'vue'</span>],</li>
           <li><span class="variable">Birth:</span> <span class="string">'1991. 11. 11'</span>,</li>
           <li><span class="variable">E-mail:</span> <span class="string">'shinyj1991@gmail.com'</span>,</li>
           <li><span class="variable">Location:</span> <span class="string">'Seoul'</span>,</li>
@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 750px) {
   #about {
-    .json {font-size: 24px;}
+    .json {font-size: 24px; line-height: 1.5;}
   }
 }
 </style>
