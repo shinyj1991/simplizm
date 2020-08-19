@@ -21,7 +21,7 @@
       <li v-for="company in maintenances" :key="company.id">
         <p class="company">{{ company.company }}</p>
         <ul class="projects">
-          <li class="lazyloaded" v-for="project in company.projects" :key="project.id">
+          <li class="lazyload" v-for="project in company.projects" :key="project.id">
             <div class="logo" v-lazyload="project.logo"></div>
             <p class="name">{{ project.name }}</p>
             <p class="period">{{ project.period }}</p>
