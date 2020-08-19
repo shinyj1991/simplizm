@@ -3,13 +3,13 @@
     <page-title>Project</page-title>
     <!-- New Project, Maintenance -->
     <div class="tab">
-      <button type="button" class="on">New Project</button>
-      <!-- <button type="button">Maintenance</button> -->
+      <button type="button" :class="{ on: tabIndex === 1 }" @click="tabIndex = 1">New Project</button>
+      <button type="button" :class="{ on: tabIndex === 2 }" @click="tabIndex = 2">Maintenance</button>
     </div>
-    <ol class="year_list">
-      <li v-for="year in years" :key="year.id">
+    <ol class="new_projects" :class="{ on: tabIndex === 1 }">
+      <li v-for="year in newProjects" :key="year.id">
         <p class="year">{{ year.year }}</p>
-        <ul class="project_list">
+        <ul class="projects">
           <li class="lazyload" v-for="project in year.projects" :key="project.id">
             <div class="logo" v-lazyload="project.logo"></div>
             <p class="name">{{ project.name }}</p>
@@ -17,13 +17,25 @@
         </ul>
       </li>
     </ol>
+    <ul class="maintenances" :class="{ on: tabIndex === 2 }">
+      <li v-for="company in maintenances" :key="company.id">
+        <p class="company">{{ company.company }}</p>
+        <ul class="projects">
+          <li class="lazyloaded" v-for="project in company.projects" :key="project.id">
+            <div class="logo" v-lazyload="project.logo"></div>
+            <p class="name">{{ project.name }}</p>
+            <p class="period">{{ project.period }}</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </article>
 </template>
 
 <script>
 export default {
   data: () => ({
-    years: [
+    newProjects: [
       {
         year: '2019',
         projects: [
@@ -114,7 +126,55 @@ export default {
           },
         ]
       }
-    ]
+    ],
+    maintenances: [
+      {
+        company: 'Newriver',
+        projects: [
+          {
+            logo: require('~/assets/images/project/starkey.png'),
+            name: 'Starkey',
+            period: '2017 ~ 2018'
+          },
+          {
+            logo: require('~/assets/images/project/megabox.png'),
+            name: 'Megabox',
+            period: '2016'
+          },
+          {
+            logo: require('~/assets/images/project/momstouch.png'),
+            name: `Mom's Touch`,
+            period: '2015 ~ 2018'
+          },
+          {
+            logo: require('~/assets/images/project/cnt.png'),
+            name: 'CNTmart',
+            period: '2015 ~ 2018'
+          },
+          {
+            logo: require('~/assets/images/project/coffeenie.png'),
+            name: 'Coffeenie',
+            period: '2015 ~ 2018'
+          },
+          {
+            logo: require('~/assets/images/project/lsnetworks.png'),
+            name: 'LS Networks',
+            period: '2015 ~ 2018'
+          },
+          {
+            logo: require('~/assets/images/project/samsung_heavy_industries.png'),
+            name: 'Samsung Heavy Industries',
+            period: '2015 ~ 2018'
+          },
+          {
+            logo: require('~/assets/images/project/binggrae.png'),
+            name: 'Binggrae',
+            period: '2015 ~ 2016'
+          }
+        ]
+      }
+    ],
+    tabIndex: 1
   }),
   methods: {}
 }
@@ -122,17 +182,18 @@ export default {
 
 <style lang="scss">
 #project {padding: 50px;
-  .tab {overflow: hidden;
+  .tab {overflow: hidden; margin: 0 0 80px;
     button {float: left; margin: 0 0 0 30px; font-size: 24px; color: #999999;
       &:first-child {margin-left: 0;}
       &.on {color: #ffffff;}
     }
   }
-  .year_list {margin: 50px 0 0;
+  .new_projects {display: none;
+    &.on {display: block;}
     > li {position: relative; margin: 50px 0 0;
       &:first-child {margin-top: 0;}
       .year {position: sticky; top: 120px; left: 0; font-weight: 300; font-size: 36px; line-height: 50px; font-style: italic;}
-      .project_list {width: 300px; margin: -50px 0 0 120px;
+      .projects {width: 300px; margin: -50px 0 0 120px;
         > li {position: relative; margin: 50px 0 0; text-align: center;
           &:first-child {margin-top: 0;}
           .logo {display: flex; justify-content: center; align-items: center; position: relative; margin: 0 0 12px; width: 100%; height: 224px; padding: 12px; background: #ffffff;
@@ -140,6 +201,29 @@ export default {
             &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
           }
           .name {font-size: 20px;}
+          &.lazyloaded {
+            .logo {
+              &:after {opacity: 0;}
+            }
+          }
+        }
+      }
+    }
+  }
+  .maintenances {display: none; width: 300px;
+    &.on {display: block;}
+    > li {position: relative; margin: 50px 0 0;
+      &:first-child {margin-top: 0;}
+      .company {position: sticky; top: 120px; left: 0; font-weight: 300; font-size: 36px; line-height: 50px; font-style: italic;}
+      .projects {width: 300px; margin: -50px 0 0 180px;
+        > li {position: relative; margin: 50px 0 0; text-align: center;
+          &:first-child {margin-top: 0;}
+          .logo {display: flex; justify-content: center; align-items: center; position: relative; margin: 0 0 12px; width: 100%; height: 224px; padding: 12px; background: #ffffff;
+            img {max-width: 200px; max-height: 200px;}
+            &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
+          }
+          .name {font-size: 20px;}
+          .period {font-style: italic; font-size: 20px; color: #cccccc;}
           &.lazyloaded {
             .logo {
               &:after {opacity: 0;}

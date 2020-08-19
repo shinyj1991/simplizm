@@ -22,6 +22,10 @@ export default {
 
 <style lang="scss">
 body {background: #000000;}
-#default {max-width: 1280px; margin: 0 auto; padding: 100px 0;}
+#default {width: 1280px; margin: 0 auto; padding: 100px 0;}
+
+@media screen and (max-width: 750px) {
+#default {width: 100%;}
+}
 </style>
 

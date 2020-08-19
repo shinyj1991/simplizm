@@ -10,7 +10,7 @@
           <li><nuxt-link to="/about">About</nuxt-link></li>
           <li><nuxt-link to="/project">Project</nuxt-link></li>
           <li><nuxt-link to="/github">Github</nuxt-link></li>
-          <li><nuxt-link to="/story">Story</nuxt-link></li>
+          <!-- <li><nuxt-link to="/story">Story</nuxt-link></li> -->
         </ul>
       </div>
     </aside>
@@ -37,8 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scope>
-#header {position: fixed; top: 0; right: 0; left: 0; z-index: 100; background: rgba(0, 0, 0, 0.8);
-  > .inner {position: relative; max-width: 1280px; height: 100px; margin: 0 auto; border-bottom: 1px solid #ffffff;
+#header {position: fixed; top: 0; right: 0; left: 0; z-index: 100; width: 100%; background: rgba(0, 0, 0, 0.8);
+  > .inner {position: relative; width: 1280px; height: 100px; margin: 0 auto; border-bottom: 1px solid #ffffff;
     h1 {position: absolute; top: 20px; left: 20px;
       a {display: block; font-family: 'Roboto'; font-weight: 700; font-size: 36px; line-height: 60px; color: #ffffff;}
     }
@@ -71,6 +71,9 @@ export default {
 }
 
 @media screen and (max-width: 750px) {
+#header {width: 750px;
+  > .inner {width: 100%;}
+}
 
 #aside {
   .inner {
