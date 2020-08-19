@@ -183,7 +183,7 @@ export default {
 <style lang="scss">
 #project {padding: 50px;
   .tab {overflow: hidden; margin: 0 0 80px;
-    button {float: left; margin: 0 0 0 30px; font-size: 24px; color: #999999;
+    button {float: left; height: 40px; margin: 0 0 0 30px; font-size: 24px; color: #999999; text-decoration: underline;
       &:first-child {margin-left: 0;}
       &.on {color: #ffffff;}
     }
@@ -237,6 +237,9 @@ export default {
 
 @media screen and (max-width: 750px) {
 #project {
+  .tab {
+    button {height: 50px; font-size: 32px;}
+  }
   .year_list {
     > li {
       .project_list {
