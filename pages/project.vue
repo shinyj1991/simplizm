@@ -1,11 +1,16 @@
 <template>
   <article id="project">
     <page-title>Project</page-title>
+    <!-- New Project, Maintenance -->
+    <div class="tab">
+      <button type="button" class="on">New Project</button>
+      <button type="button">MainTenance</button>
+    </div>
     <ol class="year_list">
       <li v-for="year in years" :key="year.id">
         <p class="year">{{ year.year }}</p>
         <ul class="project_list">
-          <li class="v-lazyload" v-for="project in year.projects" :key="project.id">
+          <li class="lazyload" v-for="project in year.projects" :key="project.id">
             <div class="logo" v-lazyload="project.logo"></div>
             <p class="name">{{ project.name }}</p>
           </li>
@@ -19,6 +24,15 @@
 export default {
   data: () => ({
     years: [
+      {
+        year: '2019',
+        projects: [
+          {
+            logo: require('~/assets/images/project/myearn.png'),
+            name: 'Myearn'
+          }
+        ]
+      },
       {
         year: '2018',
         projects: [
@@ -108,7 +122,13 @@ export default {
 
 <style lang="scss">
 #project {padding: 50px;
-  .year_list {
+  .tab {overflow: hidden;
+    button {float: left; margin: 0 0 0 30px; font-size: 24px; color: #999999;
+      &:first-child {margin-left: 0;}
+      &.on {color: #ffffff;}
+    }
+  }
+  .year_list {margin: 50px 0 0;
     > li {position: relative; margin: 50px 0 0;
       &:first-child {margin-top: 0;}
       .year {position: sticky; top: 120px; left: 0; font-weight: 300; font-size: 36px; line-height: 50px; font-style: italic;}
@@ -120,7 +140,7 @@ export default {
             &:after {display: block; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #eeeeee; transition: all 1000ms;}
           }
           .name {font-size: 20px;}
-          &.v-done {
+          &.lazyloaded {
             .logo {
               &:after {opacity: 0;}
             }
@@ -128,9 +148,6 @@ export default {
         }
       }
     }
-  }
-  .testImage {opacity: 0; transition: all 2000ms;
-    &.v-done {opacity: 1;}
   }
 }
 

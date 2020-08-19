@@ -7,11 +7,12 @@
         <ul>
           <li><span class="variable">Name:</span> <span class="string">'Shin Yongjun'</span>,</li>
           <li><span class="variable">Job:</span> <span class="string">'Frontend Developer'</span>,</li>
+          <li><span class="variable">Skills:</span> [<span class="string">'html'</span>, <span class="string">'css'</span>, <span class="string">'javascript'</span>, <span class="string">'vue'</span>, <span class="string">'nuxt'</span>],</li>
           <li><span class="variable">Birth:</span> <span class="string">'1991. 11. 11'</span>,</li>
           <li><span class="variable">E-mail:</span> <span class="string">'shinyj1991@gmail.com'</span>,</li>
           <li><span class="variable">Location:</span> <span class="string">'Seoul'</span>,</li>
-          <li><span class="variable">Hobby:</span> [<span class="string">'Guitar playing'</span>, <span class="string">'Planning'</span>],</li>
-          <li><span class="variable">Favorite:</span> [<span class="string">'Cake'</span>, <span class="string">'Movie'</span>, <span class="string">'Home'</span>]</li>
+          <li><span class="variable">hobbies:</span> [<span class="string">'Guitar playing'</span>, <span class="string">'Planning'</span>],</li>
+          <li><span class="variable">likes:</span> [<span class="string">'Cake'</span>, <span class="string">'Movie'</span>, <span class="string">'Home'</span>]</li>
         </ul>
         <p>}</p>
       </section>

@@ -50,22 +50,19 @@ export const actions = {
       params: {
         id: params.id
       }
+    }).then(res => {
+      // mutations.getTodoView 함수 호출
+      commit('getDetail', res);
+    }).catch(err => {
+      console.log(err);
     })
-      .then(res => {
-        // mutations.getTodoView 함수 호출
-        commit('getDetail', res);
-      })
-      .catch(err => {
-        console.log(err);
-      })
   },
   deleteItem({ commit }, params) {
     axios.delete('https://jsonplaceholder.typicode.com/todos/' + params.id)
-      .then(res => {
-        commit('deleteItem', params);
-      })
-      .catch(err => {
-        console.log(err);
-      })
+    .then(res => {
+      commit('deleteItem', params);
+    }).catch(err => {
+      console.log(err);
+    })
   }
 }

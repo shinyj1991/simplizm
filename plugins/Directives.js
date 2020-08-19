@@ -24,17 +24,17 @@ Vue.directive('lazyload', {
   
             imgEl.onload = function() {
               el.appendChild(imgEl);
-              if (el.closest('.v-lazyload')) {
-                el.closest('.v-lazyload').className += ' v-done';
+              if (el.closest('.lazyload')) {
+                el.closest('.lazyload').className += ' lazyloaded';
               } else {
-                el.className += ' v-done';
+                el.className += ' lazyloaded';
               }
             };
           } else {
-            if (el.closest('.v-lazyload')) {
-              el.closest('.v-lazyload').className += ' v-done';
+            if (el.closest('.lazyload')) {
+              el.closest('.lazyload').className += ' lazyloaded';
             } else {
-              el.className += ' v-done';
+              el.className += ' lazyloaded';
             }
           }
         }
