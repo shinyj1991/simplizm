@@ -38,15 +38,15 @@
 export default {
   data: () => ({
     newProjects: [
-      {
-        year: '2019',
-        projects: [
-          {
-            logo: require('~/assets/images/project/myearn.png'),
-            name: 'Myearn'
-          }
-        ]
-      },
+      // {
+      //   year: '2019',
+      //   projects: [
+      //     {
+      //       logo: require('~/assets/images/project/myearn.png'),
+      //       name: 'Myearn'
+      //     }
+      //   ]
+      // },
       {
         year: '2018',
         projects: [
