@@ -11,8 +11,10 @@
         <p class="year">{{ year.year }}</p>
         <ul class="projects">
           <li class="lazyload" v-for="project in year.projects" :key="project.id">
-            <div class="logo" v-lazyload="project.logo"></div>
-            <p class="name">{{ project.name }}</p>
+            <a :href="project.url" target="_blank">
+              <div class="logo" v-lazyload="project.logo"></div>
+              <p class="name">{{ project.name }}</p>
+            </a>
           </li>
         </ul>
       </li>
@@ -50,15 +52,18 @@ export default {
         projects: [
           {
             logo: require('~/assets/images/project/insper.png'),
-            name: 'Insper'
+            name: 'Insper',
+            url: 'https://www.insper.co.kr/'
           },
           {
             logo: require('~/assets/images/project/brandncompany.png'),
-            name: 'Brand & Company'
+            name: 'Brand & Company',
+            url: 'http://www.brandncompany.com/'
           },
           {
             logo: require('~/assets/images/project/momntalk.png'),
-            name: 'Mom & talk'
+            name: 'Mom & talk',
+            url: 'https://www.momntalk.com/'
           }
         ]
       },
@@ -67,27 +72,33 @@ export default {
         projects: [
           {
             logo: require('~/assets/images/project/genedoctor.png'),
-            name: 'Genedoctor'
+            name: 'Genedoctor',
+            url: 'https://m.genedoctor.co.kr/'
           },
           {
             logo: require('~/assets/images/project/golping.png'),
-            name: 'Golping'
+            name: 'Golping',
+            url: 'http://golping.golfzon.com/'
           },
           {
             logo: require('~/assets/images/project/strikezon.png'),
-            name: 'Strikezone'
+            name: 'Newdinmall',
+            url: 'http://www.newdinmall.com/'
           },
           {
             logo: require('~/assets/images/project/greencrossem.png'),
-            name: 'GreenCross EM'
+            name: 'GreenCross EM',
+            url: 'http://www.gcem.co.kr/'
           },
           {
             logo: require('~/assets/images/project/newriver.png'),
-            name: 'Newriver'
+            name: 'Newriver',
+            url: 'http://www.newriver.co.kr/'
           },
           {
             logo: require('~/assets/images/project/gongcha.png'),
-            name: 'Gongcha'
+            name: 'Gongcha',
+            url: 'http://www.gong-cha.co.kr/'
           },
         ]
       },
@@ -96,11 +107,13 @@ export default {
         projects: [
           {
             logo: require('~/assets/images/project/lottefinechem.png'),
-            name: 'Lotte Fine Chemical'
+            name: 'Lotte Fine Chemical',
+            url: 'https://www.lottefinechem.com/'
           },
           {
             logo: require('~/assets/images/project/bluebird.png'),
-            name: 'Bluebird'
+            name: 'Bluebird',
+            url: 'http://www.bluebirdcorp.com/'
           },
         ]
       },
@@ -109,7 +122,8 @@ export default {
         projects: [
           {
             logo: require('~/assets/images/project/coffinegurunaru.png'),
-            name: 'Coffine Gurunaru'
+            name: 'Coffine Gurunaru',
+            url: 'http://www.coffine.co.kr/'
           },
         ]
       },
@@ -118,11 +132,13 @@ export default {
         projects: [
           {
             logo: require('~/assets/images/project/imagetoday.png'),
-            name: 'Imagetoday'
+            name: 'Imagetoday',
+            url: 'https://www.imagetoday.co.kr/'
           },
           {
             logo: require('~/assets/images/project/clipartkorea.png'),
-            name: 'Clipartkorea'
+            name: 'Clipartkorea',
+            url: 'https://www.clipartkorea.co.kr/'
           },
         ]
       }
